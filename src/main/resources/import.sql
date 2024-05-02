@@ -1,0 +1,26 @@
+INSERT INTO tb_customers(name, email) VALUES ('Loki Odinson', 'loki@gmail.com');
+INSERT INTO tb_customers(name, email) VALUES ('Logan', 'logan@gmail.com');
+INSERT INTO tb_customers(name, email) VALUES ('Padme', 'padme@gmail.com');
+INSERT INTO tb_customers(name, email) VALUES ('Thor Odinson', 'thor@gmail.com');
+INSERT INTO tb_customers(name, email) VALUES ('Anakin', 'any@gmail.com');
+
+INSERT INTO tb_books(client_id,name, price) VALUES (1, 'O Senhor dos Anéis', 29.99);
+INSERT INTO tb_books(client_id,name, price) VALUES (2, 'Harry Potter e a Pedra Filosofal', 24.99);
+INSERT INTO tb_books(client_id,name, price) VALUES (3, 'As Crônicas de Nárnia', 19.99);
+INSERT INTO tb_books(client_id,name, price) VALUES (4, 'Dom Quixote', 34.99);
+INSERT INTO tb_books(client_id,name, price) VALUES (5, 'Orgulho e Preconceito', 22.99);
+INSERT INTO tb_books(client_id,name, price) VALUES (6, 'O Pequeno Príncipe', 27.99);
+INSERT INTO tb_books(client_id,name, price) VALUES (7, 'Inteligência Humilhada', 18.99);
+INSERT INTO tb_books(client_id,name, price) VALUES (8, 'Confissões', 32.99);
+INSERT INTO tb_books(client_id,name, price) VALUES (9, 'Tomás de Aquino e o Conhecimento de Deus', 21.99);
+INSERT INTO tb_books(client_id,name, price) VALUES (10, 'O Hobbit', 26.99);
+INSERT INTO tb_books(client_id,name, price) VALUES (11, 'Percy Jackson e o Ladrão de Raios', 39.99);
+INSERT INTO tb_books(client_id,name, price) VALUES (12, 'Harry Potter e o Cálice de Fogo', 23.99);
+INSERT INTO tb_books(client_id,name, price) VALUES (13, 'O Silmarillion', 15.99);
+INSERT INTO tb_books(client_id,name, price) VALUES (14, 'O Herói Perdido', 26.99);
+INSERT INTO tb_books(client_id,name, price) VALUES (15, 'O Grande Gatsby', 56.99);
+INSERT INTO tb_books(client_id,name, price) VALUES (16, 'Viland Saga', 16.99);
+INSERT INTO tb_books(client_id,name, price) VALUES (17, 'Berserk', 22.99);
+INSERT INTO tb_books(client_id,name, price) VALUES (18, 'Vagabond', 36.99);
+INSERT INTO tb_books(client_id,name, price) VALUES (19, 'Memórias Póstumas de Brás Cubas', 21.99);
+INSERT INTO tb_books(client_id,name, price) VALUES (20, 'Dom Casmurro', 9.99);
