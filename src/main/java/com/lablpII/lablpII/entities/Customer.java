@@ -24,9 +24,7 @@ public class Customer {
     private Long id;
     private String name;
     private String email;
-
-    @Setter(AccessLevel.NONE)
-    private String passoword;
+    private String password;
 
     @OneToMany(mappedBy = "customer")
     @Setter(AccessLevel.NONE)
@@ -38,6 +36,6 @@ public class Customer {
         this.id = id;
         this.name = name;
         this.email = email;
-        this.passoword = password;
+        this.password = password;
     }
 }
