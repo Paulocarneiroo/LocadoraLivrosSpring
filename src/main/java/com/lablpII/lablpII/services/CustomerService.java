@@ -1,11 +1,14 @@
 package com.lablpII.lablpII.services;
 
-import java.util.List;
-
+import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
+
+import com.lablpII.lablpII.dto.CustomerDto;
 import com.lablpII.lablpII.entities.Customer;
-import com.lablpII.lablpII.projections.CustumerMinProjection;
 import com.lablpII.lablpII.repositories.CustumerRepository;
 
 @Service
@@ -14,7 +17,16 @@ public class CustomerService {
     @Autowired
     private CustumerRepository repository;
 
-    public List<CustumerMinProjection> authenticate(String name, String password){
-        return repository.searchCustomer(name, password);
-    }
+	@Transactional(readOnly = true)
+    public CustomerDto findById(Long id) {
+	    Optional<Customer> result = repository.findById(id);
+		Customer entity = result.get();
+		return new CustomerDto(entity);
+	}
+
+	@Transactional(readOnly = true)
+    public Page<CustomerDto> findAll(Pageable pageable) {
+	    Page<Customer> result = repository.findAll(pageable);
+		return result.map(x -> new CustomerDto(x));
+	}
 }
