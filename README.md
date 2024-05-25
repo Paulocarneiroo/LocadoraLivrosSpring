@@ -24,5 +24,47 @@ componentes da mesma camada, ou da camada mais abaixo
 
 ![Camadas](padraocamadas.jpg)
 
+## Endpoints 
+
+- Find by id (GET)
+    http://localhost:8080/books/{id}
+    http://localhost:8080/customers/{id}
+
+- Find all (GET)
+    http://localhost:8080/books
+    http://localhost:8080/customers
+
+- Insert (POST)
+    http://localhost:8080/books
+    {
+        "name": "Nome do livro novo",
+        "price": "00.00"
+    }
+
+    http://localhost:8080/customers
+    {
+        "name": "Novo Fulano",
+        "email": "fulano@email.com",
+        "password": "fulano1234"
+    }
+
+- Update by id (PUT)
+    http://localhost:8080/books/{id}
+    {
+        "name": "Livro Atualizado",
+        "price": 99.9
+    }
+
+    http://localhost:8080/customers/{id}
+    {
+        "name": "Cicrano",
+        "email": "cicrano@email.com",
+        "password": "cicrano1234"
+    }
+
+- Delete by id (GET)
+    http://localhost:8080/books/{id}
+    http://localhost:8080/customers/{id}
+
 ___
 
