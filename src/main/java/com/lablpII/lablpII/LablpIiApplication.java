@@ -13,6 +13,6 @@ public class LablpIiApplication implements CommandLineRunner {
 
 	@Override
 	public void run(String... args) throws Exception{
-		System.out.println("Hello");
+		System.out.println("Application is running...");
 	}
 }

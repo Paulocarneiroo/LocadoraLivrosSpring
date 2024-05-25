@@ -5,6 +5,7 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+import org.springframework.web.bind.annotation.DeleteMapping;
 
 import com.lablpII.lablpII.dto.BookDto;
 import com.lablpII.lablpII.entities.Book;
@@ -27,5 +28,31 @@ public class BookService {
     public Page<BookDto> findAll(Pageable pageable) {
 	    Page<Book> result = repository.findAll(pageable);
 		return result.map(x -> new BookDto(x));
+	}
+
+	@Transactional
+	public BookDto insert(BookDto dto){
+		Book entity = new Book();
+		entity.setName(dto.getName());
+		entity.setPrice(dto.getPrice());
+
+		entity = repository.save(entity);
+
+		return new BookDto(entity);
+	}
+
+	@Transactional
+	public BookDto update(Long id, BookDto dto){
+		Book entity = repository.getReferenceById(id);
+		entity.setName(dto.getName());
+		entity.setPrice(dto.getPrice());
+
+		entity = repository.save(entity);
+		return new BookDto(entity);
+	}
+
+	@Transactional
+	public void delete(Long id){
+		repository.deleteById(id);
 	}
 }
