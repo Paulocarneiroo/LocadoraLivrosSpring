@@ -16,10 +16,10 @@ O Spring Boot é um framework Java baseado no Spring Framework, que simplifica o
 
 ## Arquitetura do Projeto - Padrão de Camadas 
 
-• Consiste em organizar os componentes do sistema em partes
+* Consiste em organizar os componentes do sistema em partes
 denominadas camadas
-• Cada camada possui uma responsabilidade específica
-• Componentes de uma camada só podem depender de
+* Cada camada possui uma responsabilidade específica
+* Componentes de uma camada só podem depender de
 componentes da mesma camada, ou da camada mais abaixo
 
 ![Camadas](padraocamadas.jpg)
