@@ -7,9 +7,7 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.lablpII.lablpII.dto.BookDto;
 import com.lablpII.lablpII.dto.CustomerDto;
-import com.lablpII.lablpII.entities.Book;
 import com.lablpII.lablpII.entities.Customer;
 import com.lablpII.lablpII.repositories.CustumerRepository;
 
